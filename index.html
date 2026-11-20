@@ -1,0 +1,650 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gali Rajesh — Portfolio</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f7f2;
+    color: #26382e;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+}
+
+.container {
+    width: 86%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Navigation */
+
+nav {
+    padding: 22px 0;
+    border-bottom: 1px solid #dedfd6;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #67836a;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #536156;
+    font-size: 13px;
+}
+
+.nav-links a:hover {
+    color: #47704e;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 510px;
+    display: flex;
+    align-items: center;
+    padding: 90px 0;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.small-heading {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #66836a;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 8vw, 82px);
+    line-height: 1.15;
+    margin: 22px 0;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: #66836a;
+    font-style: italic;
+}
+
+.hero p {
+    max-width: 560px;
+    color: #68736b;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+
+.primary-btn {
+    text-decoration: none;
+    background: #344f3b;
+    color: white;
+    padding: 11px 23px;
+    font-size: 13px;
+    border-radius: 3px;
+}
+
+.text-btn {
+    color: #344f3b;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* Common Sections */
+
+section {
+    padding: 75px 0;
+    border-top: 1px solid #dedfd6;
+}
+
+.section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 35px;
+    font-weight: 600;
+}
+
+.section-number {
+    font-size: 12px;
+    color: #79917b;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/* About */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+}
+
+.about-text p {
+    color: #68736b;
+    margin-bottom: 17px;
+    font-size: 15px;
+}
+
+.about-info {
+    border-top: 1px solid #dedfd6;
+}
+
+.info-row {
+    padding: 13px 0;
+    border-bottom: 1px solid #dedfd6;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 13px;
+}
+
+.info-row span:first-child {
+    color: #819083;
+}
+
+.info-row span:last-child {
+    font-weight: 600;
+    text-align: right;
+}
+
+/* Education */
+
+.education-item {
+    border-left: 2px solid #789079;
+    padding: 5px 0 5px 24px;
+}
+
+.education-item h3 {
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.education-item p {
+    color: #748075;
+    font-size: 14px;
+}
+
+.year {
+    font-size: 12px;
+    color: #789079;
+    margin-top: 8px;
+}
+
+/* Skills */
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills-list span {
+    border: 1px solid #cbd4c9;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #405c45;
+    border-radius: 3px;
+    background: #f1f3ec;
+}
+
+/* Projects */
+
+.project-list {
+    border-top: 1px solid #d9ded6;
+}
+
+.project {
+    padding: 25px 5px;
+    border-bottom: 1px solid #d9ded6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    transition: 0.2s;
+}
+
+.project:hover {
+    padding-left: 15px;
+    background: #f0f2eb;
+}
+
+.project h3 {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.project p {
+    font-size: 13px;
+    color: #7b867c;
+    margin-top: 4px;
+}
+
+.project-number {
+    color: #789079;
+    font-size: 14px;
+}
+
+/* Goal */
+
+.goal-box {
+    background: #e9eee6;
+    padding: 35px;
+    border-left: 3px solid #66836a;
+}
+
+.goal-box p {
+    max-width: 750px;
+    color: #56675a;
+    font-size: 15px;
+}
+
+/* Contact */
+
+.contact {
+    background: #304b37;
+    color: #f7f7f2;
+    padding: 65px 0;
+    margin-top: 30px;
+}
+
+.contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #d1dbd0;
+    font-size: 14px;
+}
+
+.email-link {
+    display: inline-block;
+    color: #d8e3d2;
+    margin-top: 20px;
+    text-decoration: none;
+    border-bottom: 1px solid #a5bda2;
+    padding-bottom: 4px;
+}
+
+footer {
+    padding: 20px 0;
+    background: #263c2d;
+    color: #c3d0c1;
+    font-size: 12px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Mobile */
+
+@media(max-width: 700px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .nav-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .project h3 {
+        font-size: 16px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav>
+    <div class="container nav-content">
+
+        <div class="logo">rajesh<span>.</span></div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+</nav>
+
+<!-- Home -->
+
+<div class="container">
+<section class="hero" id="home" style="border-top:none">
+
+    <div class="hero-content">
+
+        <div class="small-heading">
+            B.Tech CSE (AI & ML) · Student Portfolio
+        </div>
+
+        <h1>
+            Hi, I'm<br>
+            <span>Gali Rajesh.</span>
+        </h1>
+
+        <p>
+            I'm a third-year computer science student who enjoys
+            learning how technology works, building small projects
+            and exploring new ideas. I'm currently improving my
+            programming and development skills.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="primary-btn">
+                View my work
+            </a>
+
+            <a href="#contact" class="text-btn">
+                Get in touch ↗
+            </a>
+        </div>
+
+    </div>
+
+</section>
+</div>
+
+<!-- About -->
+
+<section id="about">
+<div class="container">
+
+    <div class="section-number">01 / ABOUT</div>
+    <h2 class="section-heading">A little about me.</h2>
+
+    <div class="about-content">
+
+        <div class="about-text">
+
+            <p>
+                My name is Gali Rajesh, and I'm currently pursuing
+                B.Tech in Computer Science and Engineering with
+                a specialization in Artificial Intelligence and
+                Machine Learning at Uttaranchal University.
+            </p>
+
+            <p>
+                I enjoy exploring different areas of technology,
+                learning programming languages and working on
+                projects that help me understand concepts better.
+            </p>
+
+            <p>
+                Apart from technology, I also have an interest
+                in business and how ideas can be turned into
+                something useful.
+            </p>
+
+        </div>
+
+        <div class="about-info">
+
+            <div class="info-row">
+                <span>Name</span>
+                <span>Gali Rajesh</span>
+            </div>
+
+            <div class="info-row">
+                <span>Roll Number</span>
+                <span>26</span>
+            </div>
+
+            <div class="info-row">
+                <span>Course</span>
+                <span>B.Tech CSE (AI & ML)</span>
+            </div>
+
+            <div class="info-row">
+                <span>University</span>
+                <span>Uttaranchal University</span>
+            </div>
+
+            <div class="info-row">
+                <span>Current Year</span>
+                <span>3rd Year</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- Education -->
+
+<section id="education">
+<div class="container">
+
+    <div class="section-number">02 / EDUCATION</div>
+    <h2 class="section-heading">My education.</h2>
+
+    <div class="education-item">
+
+        <h3>Bachelor of Technology</h3>
+
+        <p>
+            Computer Science and Engineering
+            (Artificial Intelligence & Machine Learning)
+        </p>
+
+        <p>Uttaranchal University</p>
+
+        <div class="year">Currently in 3rd Year</div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- Skills -->
+
+<section id="skills">
+<div class="container">
+
+    <div class="section-number">03 / SKILLS</div>
+    <h2 class="section-heading">Things I'm learning.</h2>
+
+    <div class="skills-list">
+
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Java</span>
+        <span>Python</span>
+
+    </div>
+
+    <p style="margin-top:22px;color:#788278;font-size:13px">
+        Learning, practising and trying to improve.
+    </p>
+
+</div>
+</section>
+
+<!-- Projects -->
+
+<section id="projects">
+<div class="container">
+
+    <div class="section-number">04 / PROJECTS</div>
+    <h2 class="section-heading">Some things I've worked on.</h2>
+
+    <div class="project-list">
+
+        <div class="project">
+            <div>
+                <h3>Customer Segmentation</h3>
+                <p>Data analysis and customer grouping project.</p>
+            </div>
+            <span class="project-number">01 ↗</span>
+        </div>
+
+        <div class="project">
+            <div>
+                <h3>Expense Tracker</h3>
+                <p>A project focused on managing and tracking expenses.</p>
+            </div>
+            <span class="project-number">02 ↗</span>
+        </div>
+
+        <div class="project">
+            <div>
+                <h3>To-Do List</h3>
+                <p>A simple task management application.</p>
+            </div>
+            <span class="project-number">03 ↗</span>
+        </div>
+
+        <div class="project">
+            <div>
+                <h3>Personal Portfolio</h3>
+                <p>A personal website to introduce myself and my work.</p>
+            </div>
+            <span class="project-number">04 ↗</span>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- Career Goal -->
+
+<section>
+<div class="container">
+
+    <div class="section-number">05 / MY GOAL</div>
+    <h2 class="section-heading">Where I want to go.</h2>
+
+    <div class="goal-box">
+
+        <p>
+            My goal is to build a good career in the IT industry
+            and find a job that gives me stability, comfort and
+            satisfaction. I want to enjoy the work I do rather
+            than simply work for the sake of it. I'm also curious
+            about business and hope to explore opportunities
+            beyond technology as I grow.
+        </p>
+
+    </div>
+
+</div>
+</section>
+
+<!-- Contact -->
+
+<div class="contact" id="contact">
+<div class="container">
+
+    <div class="section-number" style="color:#b8cdb4">
+        06 / CONTACT
+    </div>
+
+    <h2>Let's connect.</h2>
+
+    <p>
+        Have something interesting to discuss?
+        Feel free to drop me an email.
+    </p>
+
+    <a class="email-link"
+       href="mailto:rajeshgali630@gmail.com">
+       rajeshgali630@gmail.com ↗
+    </a>
+
+</div>
+</div>
+
+<!-- Footer -->
+
+<footer>
+<div class="container footer-content">
+
+    <span>© 2026 Gali Rajesh</span>
+
+    <span>Made with HTML & CSS.</span>
+
+</div>
+</footer>
+
+</body>
+</html>
